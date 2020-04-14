@@ -6,8 +6,6 @@
 	<dict>
 		<key>AutoMerge</key>
 		<true/>
-		<key>FixHeaders</key>
-		<true/>
 		<key>DSDT</key>
 		<dict>
 			<key>DropOEM_DSM</key>
@@ -20,9 +18,13 @@
 					<key>Disabled</key>
 					<false/>
 					<key>Find</key>
-					<data>TEdQQQk=</data>
+					<data>
+					TEdQQQk=
+					</data>
 					<key>Replace</key>
-					<data>WEdQQQk=</data>
+					<data>
+					WEdQQQk=
+					</data>
 				</dict>
 				<dict>
 					<key>Comment</key>
@@ -30,12 +32,18 @@
 					<key>Disabled</key>
 					<false/>
 					<key>Find</key>
-					<data>R1BSVwI=</data>
+					<data>
+					R1BSVwI=
+					</data>
 					<key>Replace</key>
-					<data>WFBSVwI=</data>
+					<data>
+					WFBSVwI=
+					</data>
 				</dict>
 			</array>
 		</dict>
+		<key>FixHeaders</key>
+		<true/>
 		<key>SSDT</key>
 		<dict>
 			<key>DropOem</key>
@@ -52,9 +60,11 @@
 	<key>Boot</key>
 	<dict>
 		<key>Arguments</key>
-		<string>darkwake=0 dart=0 gfxrst=1</string>
+		<string>darkwake=0 gfxrst=1 dart=0</string>
 		<key>DefaultVolume</key>
 		<string>LastBootedVolume</string>
+		<key>HibernationFixup</key>
+		<true/>
 		<key>Legacy</key>
 		<string>PBR</string>
 		<key>NoEarlyProgress</key>
@@ -63,8 +73,6 @@
 		<false/>
 		<key>Timeout</key>
 		<integer>4</integer>
-		<key>HibernationFixup</key>
-		<true/>
 	</dict>
 	<key>Devices</key>
 	<dict>
@@ -75,46 +83,6 @@
 		</dict>
 		<key>Properties</key>
 		<dict>
-			<key>PciRoot(0x0)/Pci(0x2,0x0)</key>
-			<dict>
-				<key>AAPL,ig-platform-id</key>
-				<data>AAAWWQ==</data>
-				<key>AAPL,slot-name</key>
-				<string>Internal</string>
-				<key>complete-modeset-framebuffers</key>
-				<data>AAAAAAAAAAE=</data>
-				<key>device-id</key>
-				<data>FlkAAA==</data>
-				<key>force-online</key>
-				<data>AQAAAA==</data>
-				<key>force-online-framebuffers</key>
-				<data>AAAAAAAAAAE=</data>
-				<key>framebuffer-con1-enable</key>
-				<data>AQAAAA==</data>
-				<key>framebuffer-con1-pipe</key>
-				<data>CgAAAA==</data>
-				<key>framebuffer-con1-type</key>
-				<data>AAgAAA==</data>
-				<key>framebuffer-fbmem</key>
-				<data>AACQAA==</data>
-				<key>framebuffer-flags</key>
-				<data>CwfjAA==</data>
-				<key>framebuffer-patch-enable</key>
-				<data>AQAAAA==</data>
-				<key>framebuffer-stolenmem</key>
-				<data>AAAwAQ==</data>
-				<key>hda-gfx</key>
-				<string>onboard-1</string>
-			</dict>
-			<key>PciRoot(0x0)/Pci(0x8,0x0)</key>
-			<dict>
-				<key>AAPL,slot-name</key>
-				<string>Internal</string>
-				<key>device_type</key>
-				<string>System Peripheral</string>
-				<key>model</key>
-				<string>Intel Xeon E3-1200 v5/v6 / E3-1500 v5 / 6th/7th Gen Core Processor Gaussian Mixture Model</string>
-			</dict>
 			<key>PciRoot(0x0)/Pci(0x14,0x0)</key>
 			<dict>
 				<key>AAPL,slot-name</key>
@@ -154,7 +122,9 @@
 			<key>PciRoot(0x0)/Pci(0x1c,0x0)</key>
 			<dict>
 				<key>reg-ltrovr</key>
-				<data>AAQAAAAAAAA=</data>
+				<data>
+				AAQAAAAAAAA=
+				</data>
 			</dict>
 			<key>PciRoot(0x0)/Pci(0x1c,0x0)/Pci(0x0,0x0)</key>
 			<dict>
@@ -166,7 +136,9 @@
 			<key>PciRoot(0x0)/Pci(0x1c,0x4)</key>
 			<dict>
 				<key>reg-ltrovr</key>
-				<data>AAQAAAAAAAA=</data>
+				<data>
+				AAQAAAAAAAA=
+				</data>
 			</dict>
 			<key>PciRoot(0x0)/Pci(0x1c,0x4)/Pci(0x0,0x0)</key>
 			<dict>
@@ -178,7 +150,9 @@
 			<key>PciRoot(0x0)/Pci(0x1c,0x7)</key>
 			<dict>
 				<key>reg-ltrovr</key>
-				<data>AAQAAAAAAAA=</data>
+				<data>
+				AAQAAAAAAAA=
+				</data>
 			</dict>
 			<key>PciRoot(0x0)/Pci(0x1c,0x7)/Pci(0x0,0x0)</key>
 			<dict>
@@ -190,7 +164,9 @@
 			<key>PciRoot(0x0)/Pci(0x1d,0x0)</key>
 			<dict>
 				<key>reg-ltrovr</key>
-				<data>AAQAAAAAAAA=</data>
+				<data>
+				AAQAAAAAAAA=
+				</data>
 			</dict>
 			<key>PciRoot(0x0)/Pci(0x1d,0x0)/Pci(0x0,0x0)</key>
 			<dict>
@@ -229,6 +205,70 @@
 				<string>Internal</string>
 				<key>model</key>
 				<string>Intel Sunrise Point-LP SMBus</string>
+			</dict>
+			<key>PciRoot(0x0)/Pci(0x2,0x0)</key>
+			<dict>
+				<key>AAPL,ig-platform-id</key>
+				<data>
+				AAAWWQ==
+				</data>
+				<key>AAPL,slot-name</key>
+				<string>Internal</string>
+				<key>complete-modeset-framebuffers</key>
+				<data>
+				AAAAAAAAAAE=
+				</data>
+				<key>device-id</key>
+				<data>
+				FlkAAA==
+				</data>
+				<key>force-online</key>
+				<data>
+				AQAAAA==
+				</data>
+				<key>force-online-framebuffers</key>
+				<data>
+				AAAAAAAAAAE=
+				</data>
+				<key>framebuffer-con1-enable</key>
+				<data>
+				AQAAAA==
+				</data>
+				<key>framebuffer-con1-pipe</key>
+				<data>
+				CgAAAA==
+				</data>
+				<key>framebuffer-con1-type</key>
+				<data>
+				AAgAAA==
+				</data>
+				<key>framebuffer-fbmem</key>
+				<data>
+				AACQAA==
+				</data>
+				<key>framebuffer-flags</key>
+				<data>
+				CwfjAA==
+				</data>
+				<key>framebuffer-patch-enable</key>
+				<data>
+				AQAAAA==
+				</data>
+				<key>framebuffer-stolenmem</key>
+				<data>
+				AAAwAQ==
+				</data>
+				<key>hda-gfx</key>
+				<string>onboard-1</string>
+			</dict>
+			<key>PciRoot(0x0)/Pci(0x8,0x0)</key>
+			<dict>
+				<key>AAPL,slot-name</key>
+				<string>Internal</string>
+				<key>device_type</key>
+				<string>System Peripheral</string>
+				<key>model</key>
+				<string>Intel Xeon E3-1200 v5/v6 / E3-1500 v5 / 6th/7th Gen Core Processor Gaussian Mixture Model</string>
 			</dict>
 		</dict>
 		<key>SetIntelBacklight</key>
@@ -318,23 +358,6 @@
 	<dict>
 		<key>AppleRTC</key>
 		<true/>
-		<key>PanicNoKextDump</key>
-		<true/>
-		<key>KextsToPatch</key>
-		<array>
-			<dict>
-				<key>Comment</key>
-				<string>Enable TRIM for SSD</string>
-				<key>Disabled</key>
-				<false/>
-				<key>Name</key>
-				<string>com.apple.iokit.IOAHCIBlockStorage</string>
-				<key>Find</key>
-				<data>AEFQUExFIFNTRAA=</data>
-				<key>Replace</key>
-				<data>AAAAAAAAAAAAAAA=</data>
-			</dict>
-		</array>
 		<key>KernelToPatch</key>
 		<array>
 			<dict>
@@ -342,21 +365,48 @@
 				<string>Disable setPowerState panic with setpowerstate_panic=0 boot-args on 10.15 (credit vit9696)</string>
 				<key>Disabled</key>
 				<false/>
+				<key>Find</key>
+				<data>
+				Y29tLmFwcGxlAA==
+				</data>
 				<key>MatchOS</key>
 				<string>10.15</string>
-				<key>Find</key>
-				<data>Y29tLmFwcGxlAA==</data>
 				<key>Replace</key>
-				<data>bm90LmFwcGxlAA==</data>
+				<data>
+				bm90LmFwcGxlAA==
+				</data>
 			</dict>
 		</array>
+		<key>KextsToPatch</key>
+		<array>
+			<dict>
+				<key>Comment</key>
+				<string>Enable TRIM for SSD</string>
+				<key>Disabled</key>
+				<false/>
+				<key>Find</key>
+				<data>
+				AEFQUExFIFNTRAA=
+				</data>
+				<key>InfoPlistPatch</key>
+				<false/>
+				<key>Name</key>
+				<string>com.apple.iokit.IOAHCIBlockStorage</string>
+				<key>Replace</key>
+				<data>
+				AAAAAAAAAAAAAAA=
+				</data>
+			</dict>
+		</array>
+		<key>PanicNoKextDump</key>
+		<true/>
 	</dict>
 	<key>RtVariables</key>
 	<dict>
-		<key>CsrActiveConfig</key>
-		<string>0x67</string>
 		<key>BooterConfig</key>
 		<string>0x28</string>
+		<key>CsrActiveConfig</key>
+		<string>0x67</string>
 		<key>ROM</key>
 		<string>UseMacAddr0</string>
 	</dict>
