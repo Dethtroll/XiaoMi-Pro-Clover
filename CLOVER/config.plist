@@ -247,6 +247,30 @@
 	</dict>
 	<key>GUI</key>
 	<dict>
+		<key>Custom</key>
+		<dict>
+			<key>Entries</key>
+			<array>
+				<dict>
+					<key>Disabled</key>
+					<false/>
+					<key>FullTitle</key>
+					<string>Windows</string>
+					<key>Ignore</key>
+					<false/>
+					<key>Path</key>
+					<string>\EFI\Microsoft\Boot\bootmgrfw.efi</string>
+					<key>Type</key>
+					<string>Windows</string>
+					<key>Volume</key>
+					<string>74BB9E54-1CD1-468D-9815-39D7731F60EC</string>
+					<key>VolumeType</key>
+					<string>Internal</string>
+				</dict>
+			</array>
+		</dict>
+		<key>CustomIcons</key>
+		<false/>
 		<key>Hide</key>
 		<array>
 			<string>Preboot</string>
