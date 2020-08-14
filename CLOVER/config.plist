@@ -18,13 +18,9 @@
 					<key>Disabled</key>
 					<false/>
 					<key>Find</key>
-					<data>
-					TEdQQQk=
-					</data>
+					<data>TEdQQQk=</data>
 					<key>Replace</key>
-					<data>
-					WEdQQQk=
-					</data>
+					<data>WEdQQQk=</data>
 				</dict>
 				<dict>
 					<key>Comment</key>
@@ -32,13 +28,9 @@
 					<key>Disabled</key>
 					<false/>
 					<key>Find</key>
-					<data>
-					R1BSVwI=
-					</data>
+					<data>R1BSVwI=</data>
 					<key>Replace</key>
-					<data>
-					WFBSVwI=
-					</data>
+					<data>WFBSVwI=</data>
 				</dict>
 			</array>
 		</dict>
@@ -60,7 +52,7 @@
 	<key>Boot</key>
 	<dict>
 		<key>Arguments</key>
-		<string>darkwake=0 gfxrst=1 dart=0</string>
+		<string>darkwake=0 dart=0 gfxrst=1</string>
 		<key>DefaultVolume</key>
 		<string>LastBootedVolume</string>
 		<key>HibernationFixup</key>
@@ -122,9 +114,7 @@
 			<key>PciRoot(0x0)/Pci(0x1c,0x0)</key>
 			<dict>
 				<key>reg-ltrovr</key>
-				<data>
-				AAQAAAAAAAA=
-				</data>
+				<data>AAQAAAAAAAA=</data>
 			</dict>
 			<key>PciRoot(0x0)/Pci(0x1c,0x0)/Pci(0x0,0x0)</key>
 			<dict>
@@ -136,9 +126,7 @@
 			<key>PciRoot(0x0)/Pci(0x1c,0x4)</key>
 			<dict>
 				<key>reg-ltrovr</key>
-				<data>
-				AAQAAAAAAAA=
-				</data>
+				<data>AAQAAAAAAAA=</data>
 			</dict>
 			<key>PciRoot(0x0)/Pci(0x1c,0x4)/Pci(0x0,0x0)</key>
 			<dict>
@@ -150,9 +138,7 @@
 			<key>PciRoot(0x0)/Pci(0x1c,0x7)</key>
 			<dict>
 				<key>reg-ltrovr</key>
-				<data>
-				AAQAAAAAAAA=
-				</data>
+				<data>AAQAAAAAAAA=</data>
 			</dict>
 			<key>PciRoot(0x0)/Pci(0x1c,0x7)/Pci(0x0,0x0)</key>
 			<dict>
@@ -164,9 +150,7 @@
 			<key>PciRoot(0x0)/Pci(0x1d,0x0)</key>
 			<dict>
 				<key>reg-ltrovr</key>
-				<data>
-				AAQAAAAAAAA=
-				</data>
+				<data>AAQAAAAAAAA=</data>
 			</dict>
 			<key>PciRoot(0x0)/Pci(0x1d,0x0)/Pci(0x0,0x0)</key>
 			<dict>
@@ -209,55 +193,31 @@
 			<key>PciRoot(0x0)/Pci(0x2,0x0)</key>
 			<dict>
 				<key>AAPL,ig-platform-id</key>
-				<data>
-				AAAWWQ==
-				</data>
+				<data>AAAWWQ==</data>
 				<key>AAPL,slot-name</key>
 				<string>Internal</string>
 				<key>complete-modeset-framebuffers</key>
-				<data>
-				AAAAAAAAAAE=
-				</data>
+				<data>AAAAAAAAAAE=</data>
 				<key>device-id</key>
-				<data>
-				FlkAAA==
-				</data>
+				<data>FlkAAA==</data>
 				<key>force-online</key>
-				<data>
-				AQAAAA==
-				</data>
+				<data>AQAAAA==</data>
 				<key>force-online-framebuffers</key>
-				<data>
-				AAAAAAAAAAE=
-				</data>
+				<data>AAAAAAAAAAE=</data>
 				<key>framebuffer-con1-enable</key>
-				<data>
-				AQAAAA==
-				</data>
+				<data>AQAAAA==</data>
 				<key>framebuffer-con1-pipe</key>
-				<data>
-				CgAAAA==
-				</data>
+				<data>CgAAAA==</data>
 				<key>framebuffer-con1-type</key>
-				<data>
-				AAgAAA==
-				</data>
+				<data>AAgAAA==</data>
 				<key>framebuffer-fbmem</key>
-				<data>
-				AACQAA==
-				</data>
+				<data>AACQAA==</data>
 				<key>framebuffer-flags</key>
-				<data>
-				CwfjAA==
-				</data>
+				<data>CwfjAA==</data>
 				<key>framebuffer-patch-enable</key>
-				<data>
-				AQAAAA==
-				</data>
+				<data>AQAAAA==</data>
 				<key>framebuffer-stolenmem</key>
-				<data>
-				AAAwAQ==
-				</data>
+				<data>AAAwAQ==</data>
 				<key>hda-gfx</key>
 				<string>onboard-1</string>
 			</dict>
@@ -294,23 +254,25 @@
 				<dict>
 					<key>Disabled</key>
 					<false/>
-					<key>FullTitle</key>
-					<string>Windows</string>
 					<key>Ignore</key>
 					<false/>
+					<key>Image</key>
+					<string>win</string>
 					<key>Path</key>
-					<string>\EFI\Microsoft\Boot\bootmgrfw.efi</string>
+					<string>\EFI\Microsoft\Boot\__bootmgfw.efi</string>
+					<key>Title</key>
+					<string>Windows</string>
 					<key>Type</key>
 					<string>Windows</string>
 					<key>Volume</key>
-					<string>74BB9E54-1CD1-468D-9815-39D7731F60EC</string>
+					<string>DA20FBC8-A342-4832-9838-A7CF050E2C89</string>
 					<key>VolumeType</key>
 					<string>Internal</string>
 				</dict>
 			</array>
 		</dict>
 		<key>CustomIcons</key>
-		<false/>
+		<true/>
 		<key>Hide</key>
 		<array>
 			<string>Preboot</string>
@@ -366,15 +328,11 @@
 				<key>Disabled</key>
 				<false/>
 				<key>Find</key>
-				<data>
-				Y29tLmFwcGxlAA==
-				</data>
+				<data>Y29tLmFwcGxlAA==</data>
 				<key>MatchOS</key>
 				<string>10.15</string>
 				<key>Replace</key>
-				<data>
-				bm90LmFwcGxlAA==
-				</data>
+				<data>bm90LmFwcGxlAA==</data>
 			</dict>
 		</array>
 		<key>KextsToPatch</key>
@@ -385,17 +343,13 @@
 				<key>Disabled</key>
 				<false/>
 				<key>Find</key>
-				<data>
-				AEFQUExFIFNTRAA=
-				</data>
+				<data>AEFQUExFIFNTRAA=</data>
 				<key>InfoPlistPatch</key>
 				<false/>
 				<key>Name</key>
 				<string>com.apple.iokit.IOAHCIBlockStorage</string>
 				<key>Replace</key>
-				<data>
-				AAAAAAAAAAAAAAA=
-				</data>
+				<data>AAAAAAAAAAAAAAA=</data>
 			</dict>
 		</array>
 		<key>PanicNoKextDump</key>
