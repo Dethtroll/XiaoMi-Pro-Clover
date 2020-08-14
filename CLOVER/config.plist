@@ -14,7 +14,17 @@
 			<array>
 				<dict>
 					<key>Comment</key>
-					<string>Rename LGPA to XGPA, pair with SSDT-LGPA.aml (Brightness Key)</string>
+					<string>Rename Method(GPRW,2,N) to XPRW, pair with SSDT-GPRW.aml (Instant Wake)</string>
+					<key>Disabled</key>
+					<false/>
+					<key>Find</key>
+					<data>R1BSVwI=</data>
+					<key>Replace</key>
+					<data>WFBSVwI=</data>
+				</dict>
+				<dict>
+					<key>Comment</key>
+					<string>Rename Method(LGPA,1,S) to XGPA, pair with SSDT-LGPA.aml (Brightness Key)</string>
 					<key>Disabled</key>
 					<false/>
 					<key>Find</key>
@@ -24,13 +34,13 @@
 				</dict>
 				<dict>
 					<key>Comment</key>
-					<string>Rename Method(GPRW,2,N) to XPRW, pair with SSDT-GPRW.aml (Instant Wake)</string>
+					<string>Rename Method(UPC,0,S) to XUPC, pair with SSDT-USB.aml (USB Port Customization)</string>
 					<key>Disabled</key>
 					<false/>
 					<key>Find</key>
-					<data>R1BSVwI=</data>
+					<data>X1VQQwg=</data>
 					<key>Replace</key>
-					<data>WFBSVwI=</data>
+					<data>WFVQQwg=</data>
 				</dict>
 			</array>
 		</dict>
@@ -83,6 +93,15 @@
 				<string>Intel Sunrise Point-LP USB 3.0 xHCI Controller</string>
 				<key>name</key>
 				<string>pci8086,9d2f</string>
+			</dict>
+			<key>PciRoot(0x0)/Pci(0x14,0x2)</key>
+			<dict>
+				<key>AAPL,slot-name</key>
+				<string>Internal</string>
+				<key>device_type</key>
+				<string>Signal processing controller</string>
+				<key>model</key>
+				<string>Intel Sunrise Point-LP Thermal subsystem</string>
 			</dict>
 			<key>PciRoot(0x0)/Pci(0x15,0x0)</key>
 			<dict>
@@ -161,6 +180,13 @@
 				<key>use-msi</key>
 				<string>1</string>
 			</dict>
+			<key>PciRoot(0x0)/Pci(0x1f,0x0)</key>
+			<dict>
+				<key>AAPL,slot-name</key>
+				<string>Internal</string>
+				<key>model</key>
+				<string>Intel Sunrise Point LPC Controller</string>
+			</dict>
 			<key>PciRoot(0x0)/Pci(0x1f,0x2)</key>
 			<dict>
 				<key>AAPL,slot-name</key>
@@ -204,12 +230,22 @@
 				<data>AQAAAA==</data>
 				<key>force-online-framebuffers</key>
 				<data>AAAAAAAAAAE=</data>
+				<key>framebuffer-con0-enable</key>
+				<data>AQAAAA==</data>
+				<key>framebuffer-con0-flags</key>
+				<data>mAQAAA==</data>
 				<key>framebuffer-con1-enable</key>
 				<data>AQAAAA==</data>
+				<key>framebuffer-con1-flags</key>
+				<data>xwMAAA==</data>
 				<key>framebuffer-con1-pipe</key>
 				<data>CgAAAA==</data>
 				<key>framebuffer-con1-type</key>
 				<data>AAgAAA==</data>
+				<key>framebuffer-con2-enable</key>
+				<data>AQAAAA==</data>
+				<key>framebuffer-con2-flags</key>
+				<data>xwMAAA==</data>
 				<key>framebuffer-fbmem</key>
 				<data>AACQAA==</data>
 				<key>framebuffer-flags</key>
@@ -256,8 +292,6 @@
 					<false/>
 					<key>Ignore</key>
 					<false/>
-					<key>Image</key>
-					<string>win</string>
 					<key>Path</key>
 					<string>\EFI\Microsoft\Boot\__bootmgfw.efi</string>
 					<key>Title</key>
@@ -271,8 +305,6 @@
 				</dict>
 			</array>
 		</dict>
-		<key>CustomIcons</key>
-		<true/>
 		<key>Hide</key>
 		<array>
 			<string>Preboot</string>
