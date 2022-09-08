@@ -6,10 +6,10 @@
 	<dict>
 		<key>AutoMerge</key>
 		<true/>
+		<key>FixHeaders</key>
+		<true/>
 		<key>DSDT</key>
 		<dict>
-			<key>DropOEM_DSM</key>
-			<false/>
 			<key>Patches</key>
 			<array>
 				<dict>
@@ -34,7 +34,7 @@
 				</dict>
 				<dict>
 					<key>Comment</key>
-					<string>Rename Method(UPC,0,S) to XUPC, pair with SSDT-USB.aml (USB Port Customization)</string>
+					<string>Rename Method(_UPC,0,S) to XUPC, pair with SSDT-USB.aml (USB Port Customization)</string>
 					<key>Disabled</key>
 					<false/>
 					<key>Find</key>
@@ -44,8 +44,6 @@
 				</dict>
 			</array>
 		</dict>
-		<key>FixHeaders</key>
-		<true/>
 		<key>SSDT</key>
 		<dict>
 			<key>DropOem</key>
@@ -62,7 +60,7 @@
 	<key>Boot</key>
 	<dict>
 		<key>Arguments</key>
-		<string>darkwake=0 dart=0 gfxrst=1</string>
+		<string>darkwake=0</string>
 		<key>DefaultVolume</key>
 		<string>LastBootedVolume</string>
 		<key>HibernationFixup</key>
@@ -71,6 +69,8 @@
 		<string>PBR</string>
 		<key>NoEarlyProgress</key>
 		<true/>
+		<key>RtcHibernateAware</key>
+		<false/>
 		<key>Secure</key>
 		<false/>
 		<key>Timeout</key>
@@ -85,10 +85,50 @@
 		</dict>
 		<key>Properties</key>
 		<dict>
+			<key>PciRoot(0x0)/Pci(0x2,0x0)</key>
+			<dict>
+				<key>AAPL,ig-platform-id</key>
+				<data>BQAcWQ==</data>
+				<key>complete-modeset-framebuffers</key>
+				<data>AAAAAAAAAAE=</data>
+				<key>device-id</key>
+				<data>FlkAAA==</data>
+				<key>#enable-backlight-smoother</key>
+				<data>AQAAAA==</data>
+				<key>enable-max-pixel-clock-override</key>
+				<data>AQAAAA==</data>
+				<key>force-online</key>
+				<data>AQAAAA==</data>
+				<key>framebuffer-con1-enable</key>
+				<data>AQAAAA==</data>
+				<key>framebuffer-con1-pipe</key>
+				<data>CgAAAA==</data>
+				<key>framebuffer-con1-type</key>
+				<data>AAgAAA==</data>
+				<key>framebuffer-con2-enable</key>
+				<data>AQAAAA==</data>
+				<key>framebuffer-con2-type</key>
+				<data>AAQAAA==</data>
+				<key>framebuffer-fbmem</key>
+				<data>AACQAA==</data>
+				<key>framebuffer-flags</key>
+				<data>CwfDAA==</data>
+				<key>framebuffer-patch-enable</key>
+				<data>AQAAAA==</data>
+				<key>framebuffer-stolenmem</key>
+				<data>AAAwAQ==</data>
+				<key>hda-gfx</key>
+				<string>onboard-1</string>
+			</dict>
+			<key>PciRoot(0x0)/Pci(0x8,0x0)</key>
+			<dict>
+				<key>device_type</key>
+				<string>System Peripheral</string>
+				<key>model</key>
+				<string>Intel 8th Gen Core Processor Gaussian Mixture Model</string>
+			</dict>
 			<key>PciRoot(0x0)/Pci(0x14,0x0)</key>
 			<dict>
-				<key>AAPL,slot-name</key>
-				<string>Internal</string>
 				<key>model</key>
 				<string>Intel Sunrise Point-LP USB 3.0 xHCI Controller</string>
 				<key>name</key>
@@ -96,8 +136,6 @@
 			</dict>
 			<key>PciRoot(0x0)/Pci(0x14,0x2)</key>
 			<dict>
-				<key>AAPL,slot-name</key>
-				<string>Internal</string>
 				<key>device_type</key>
 				<string>Signal processing controller</string>
 				<key>model</key>
@@ -105,8 +143,6 @@
 			</dict>
 			<key>PciRoot(0x0)/Pci(0x15,0x0)</key>
 			<dict>
-				<key>AAPL,slot-name</key>
-				<string>Internal</string>
 				<key>device_type</key>
 				<string>Signal Processing Controller</string>
 				<key>model</key>
@@ -114,8 +150,6 @@
 			</dict>
 			<key>PciRoot(0x0)/Pci(0x15,0x1)</key>
 			<dict>
-				<key>AAPL,slot-name</key>
-				<string>Internal</string>
 				<key>device_type</key>
 				<string>Signal Processing Controller</string>
 				<key>model</key>
@@ -123,8 +157,6 @@
 			</dict>
 			<key>PciRoot(0x0)/Pci(0x16,0x0)</key>
 			<dict>
-				<key>AAPL,slot-name</key>
-				<string>Internal</string>
 				<key>device_type</key>
 				<string>Communication Controller</string>
 				<key>model</key>
@@ -137,10 +169,8 @@
 			</dict>
 			<key>PciRoot(0x0)/Pci(0x1c,0x0)/Pci(0x0,0x0)</key>
 			<dict>
-				<key>AAPL,slot-name</key>
-				<string>Internal</string>
 				<key>model</key>
-				<string>NVIDIA GeForce MX150</string>
+				<string>Intel Sunrise Point-LP PCI Express Root Port #1</string>
 			</dict>
 			<key>PciRoot(0x0)/Pci(0x1c,0x4)</key>
 			<dict>
@@ -149,8 +179,6 @@
 			</dict>
 			<key>PciRoot(0x0)/Pci(0x1c,0x4)/Pci(0x0,0x0)</key>
 			<dict>
-				<key>AAPL,slot-name</key>
-				<string>Internal</string>
 				<key>model</key>
 				<string>Intel Sunrise Point-LP PCI Express Root Port #5</string>
 			</dict>
@@ -161,8 +189,6 @@
 			</dict>
 			<key>PciRoot(0x0)/Pci(0x1c,0x7)/Pci(0x0,0x0)</key>
 			<dict>
-				<key>AAPL,slot-name</key>
-				<string>Internal</string>
 				<key>model</key>
 				<string>Intel Wireless 8265</string>
 			</dict>
@@ -173,24 +199,16 @@
 			</dict>
 			<key>PciRoot(0x0)/Pci(0x1d,0x0)/Pci(0x0,0x0)</key>
 			<dict>
-				<key>AAPL,slot-name</key>
-				<string>Internal</string>
 				<key>model</key>
 				<string>Intel Sunrise Point-LP PCI Express Root Port #9</string>
-				<key>use-msi</key>
-				<string>1</string>
 			</dict>
 			<key>PciRoot(0x0)/Pci(0x1f,0x0)</key>
 			<dict>
-				<key>AAPL,slot-name</key>
-				<string>Internal</string>
 				<key>model</key>
 				<string>Intel Sunrise Point LPC Controller</string>
 			</dict>
 			<key>PciRoot(0x0)/Pci(0x1f,0x2)</key>
 			<dict>
-				<key>AAPL,slot-name</key>
-				<string>Internal</string>
 				<key>device_type</key>
 				<string>Memory Controller</string>
 				<key>model</key>
@@ -198,8 +216,6 @@
 			</dict>
 			<key>PciRoot(0x0)/Pci(0x1f,0x3)</key>
 			<dict>
-				<key>AAPL,slot-name</key>
-				<string>Internal</string>
 				<key>hda-gfx</key>
 				<string>onboard-1</string>
 				<key>hda-idle-support</key>
@@ -211,66 +227,10 @@
 			</dict>
 			<key>PciRoot(0x0)/Pci(0x1f,0x4)</key>
 			<dict>
-				<key>AAPL,slot-name</key>
-				<string>Internal</string>
 				<key>model</key>
 				<string>Intel Sunrise Point-LP SMBus</string>
 			</dict>
-			<key>PciRoot(0x0)/Pci(0x2,0x0)</key>
-			<dict>
-				<key>AAPL,ig-platform-id</key>
-				<data>AAAWWQ==</data>
-				<key>AAPL,slot-name</key>
-				<string>Internal</string>
-				<key>complete-modeset-framebuffers</key>
-				<data>AAAAAAAAAAE=</data>
-				<key>device-id</key>
-				<data>FlkAAA==</data>
-				<key>force-online</key>
-				<data>AQAAAA==</data>
-				<key>force-online-framebuffers</key>
-				<data>AAAAAAAAAAE=</data>
-				<key>framebuffer-con0-enable</key>
-				<data>AQAAAA==</data>
-				<key>framebuffer-con0-flags</key>
-				<data>mAQAAA==</data>
-				<key>framebuffer-con1-enable</key>
-				<data>AQAAAA==</data>
-				<key>framebuffer-con1-flags</key>
-				<data>xwMAAA==</data>
-				<key>framebuffer-con1-pipe</key>
-				<data>CgAAAA==</data>
-				<key>framebuffer-con1-type</key>
-				<data>AAgAAA==</data>
-				<key>framebuffer-con2-enable</key>
-				<data>AQAAAA==</data>
-				<key>framebuffer-con2-flags</key>
-				<data>xwMAAA==</data>
-				<key>framebuffer-fbmem</key>
-				<data>AACQAA==</data>
-				<key>framebuffer-flags</key>
-				<data>CwfjAA==</data>
-				<key>framebuffer-patch-enable</key>
-				<data>AQAAAA==</data>
-				<key>framebuffer-stolenmem</key>
-				<data>AAAwAQ==</data>
-				<key>hda-gfx</key>
-				<string>onboard-1</string>
-			</dict>
-			<key>PciRoot(0x0)/Pci(0x8,0x0)</key>
-			<dict>
-				<key>AAPL,slot-name</key>
-				<string>Internal</string>
-				<key>device_type</key>
-				<string>System Peripheral</string>
-				<key>model</key>
-				<string>Intel Xeon E3-1200 v5/v6 / E3-1500 v5 / 6th/7th Gen Core Processor Gaussian Mixture Model</string>
-			</dict>
 		</dict>
-		<key>SetIntelBacklight</key>
-		<true/>
-		<key>SetIntelMaxBacklight</key>
-		<true/>
 		<key>USB</key>
 		<dict>
 			<key>FixOwnership</key>
@@ -281,6 +241,10 @@
 			<false/>
 		</dict>
 	</dict>
+	<key>DisableDrivers</key>
+	<array>
+		<string>ExFatDxe</string>
+	</array>
 	<key>GUI</key>
 	<dict>
 		<key>Custom</key>
@@ -307,13 +271,18 @@
 		</dict>
 		<key>Hide</key>
 		<array>
-			<string>Preboot</string>
 			<string>Recovery</string>
 		</array>
 		<key>Mouse</key>
 		<dict>
+			<key>DoubleClickTime</key>
+			<integer>500</integer>
 			<key>Enabled</key>
+			<true/>
+			<key>Mirror</key>
 			<false/>
+			<key>Speed</key>
+			<integer>6</integer>
 		</dict>
 		<key>Scan</key>
 		<dict>
@@ -326,6 +295,8 @@
 			<key>Tool</key>
 			<true/>
 		</dict>
+		<key>ProvideConsoleGop</key>
+		<true/>
 		<key>ScreenResolution</key>
 		<string>1920x1080</string>
 		<key>Theme</key>
@@ -350,65 +321,123 @@
 	</dict>
 	<key>KernelAndKextPatches</key>
 	<dict>
+		<key>AppleIntelCPUPM</key>
+		<false/>
 		<key>AppleRTC</key>
 		<true/>
-		<key>KernelToPatch</key>
-		<array>
-			<dict>
-				<key>Comment</key>
-				<string>Disable setPowerState panic with setpowerstate_panic=0 boot-args on 10.15 (credit vit9696)</string>
-				<key>Disabled</key>
-				<false/>
-				<key>Find</key>
-				<data>Y29tLmFwcGxlAA==</data>
-				<key>MatchOS</key>
-				<string>10.15</string>
-				<key>Replace</key>
-				<data>bm90LmFwcGxlAA==</data>
-			</dict>
-		</array>
-		<key>KextsToPatch</key>
-		<array>
-			<dict>
-				<key>Comment</key>
-				<string>Enable TRIM for SSD</string>
-				<key>Disabled</key>
-				<false/>
-				<key>Find</key>
-				<data>AEFQUExFIFNTRAA=</data>
-				<key>InfoPlistPatch</key>
-				<false/>
-				<key>Name</key>
-				<string>com.apple.iokit.IOAHCIBlockStorage</string>
-				<key>Replace</key>
-				<data>AAAAAAAAAAAAAAA=</data>
-			</dict>
-		</array>
+		<key>KernelPm</key>
+		<true/>
 		<key>PanicNoKextDump</key>
 		<true/>
+		<key>ForceKextsToLoad</key>
+		<array>
+			<string>\System\Library\Extensions\IO80211Family.kext</string>
+		</array>
+		<key>KextsToPatch</key>
+		<array/>
+		<key>KernelToPatch</key>
+		<array/>
 	</dict>
 	<key>RtVariables</key>
 	<dict>
+		<key>CsrActiveConfig</key>
+		<string>0x0</string>
 		<key>BooterConfig</key>
 		<string>0x28</string>
-		<key>CsrActiveConfig</key>
-		<string>0x67</string>
 		<key>ROM</key>
-		<string>UseMacAddr0</string>
+		<data>ABbLESIz</data>
 	</dict>
 	<key>SMBIOS</key>
 	<dict>
 		<key>ProductName</key>
-		<string>MacBookPro14,1</string>
+		<string>MacBookPro15,4</string>
 		<key>Trust</key>
 		<true/>
 	</dict>
 	<key>SystemParameters</key>
 	<dict>
 		<key>InjectKexts</key>
-		<string>Yes</string>
+		<true/>
 		<key>InjectSystemID</key>
 		<true/>
+	</dict>
+	<key>Quirks</key>
+	<dict>
+		<key>AvoidRuntimeDefrag</key>
+		<true/>
+		<key>DevirtualiseMmio</key>
+		<true/>
+		<key>DisableSingleUser</key>
+		<false/>
+		<key>DisableVariableWrite</key>
+		<false/>
+		<key>DiscardHibernateMap</key>
+		<false/>
+		<key>EnableSafeModeSlide</key>
+		<false/>
+		<key>EnableWriteUnprotector</key>
+		<false/>
+		<key>ForceExitBootServices</key>
+		<false/>
+		<key>ForceOcWriteFlash</key>
+		<false/>
+		<key>MmioWhitelist</key>
+		<array>
+			<dict>
+				<key>Address</key>
+				<integer>4288675840</integer>
+				<key>Comment</key>
+				<string>MMIO 0xFFA00000 (0x600 pages, 0x8000000000000001)</string>
+				<key>Enabled</key>
+				<true/>
+			</dict>
+		</array>
+		<key>ProtectMemoryRegions</key>
+		<false/>
+		<key>ProtectSecureBoot</key>
+		<false/>
+		<key>ProtectUefiServices</key>
+		<true/>
+		<key>ProvideCustomSlide</key>
+		<false/>
+		<key>ProvideMaxSlide</key>
+		<integer>0</integer>
+		<key>RebuildAppleMemoryMap</key>
+		<true/>
+		<key>ResizeAppleGpuBars</key>
+		<integer>-1</integer>
+		<key>SetupVirtualMap</key>
+		<true/>
+		<key>SignalAppleOS</key>
+		<false/>
+		<key>SyncRuntimePermissions</key>
+		<true/>
+		<key>FuzzyMatch</key>
+		<false/>
+		<key>KernelCache</key>
+		<string>Auto</string>
+		<key>AppleXcpmExtraMsrs</key>
+		<false/>
+		<key>AppleXcpmForceBoost</key>
+		<false/>
+		<key>DisableIoMapper</key>
+		<true/>
+		<key>DisableLinkeditJettison</key>
+		<true/>
+		<key>DummyPowerManagement</key>
+		<false/>
+		<key>ExtendBTFeatureFlags</key>
+		<false/>
+		<key>ExternalDiskIcons</key>
+		<false/>
+		<key>IncreasePciBarSize</key>
+		<false/>
+		<key>PowerTimeoutKernelPanic</key>
+		<true/>
+		<key>ThirdPartyDrives</key>
+		<true/>
+		<key>XhciPortLimit</key>
+		<false/>
 	</dict>
 </dict>
 </plist>
